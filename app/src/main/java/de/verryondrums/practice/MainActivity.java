@@ -1,4 +1,4 @@
-package de.verry_on_drums.practice;
+package de.verryondrums.practice;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -8,9 +8,9 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
-import de.verry_on_drums.practice.fragments.DashboardFragment;
-import de.verry_on_drums.practice.fragments.SettingsFragment;
-import de.verry_on_drums.practice.fragments.StartTrackingFragment;
+import de.verryondrums.practice.fragments.DashboardFragment;
+import de.verryondrums.practice.fragments.SettingsFragment;
+import de.verryondrums.practice.fragments.StartTrackingFragment;
 
 public class MainActivity extends AppCompatActivity {
 

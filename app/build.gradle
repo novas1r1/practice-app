@@ -4,7 +4,7 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
     defaultConfig {
-        applicationId "de.verry_on_drums.practice"
+        applicationId "de.verryondrums.practice"
         minSdkVersion 21
         targetSdkVersion 25
         versionCode 1

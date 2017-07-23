@@ -1,4 +1,4 @@
-package de.verry_on_drums.practice.fragments;
+package de.verryondrums.practice.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import de.verry_on_drums.practice.R;
+import de.verryondrums.practice.R;
 
 /**
  * A simple {@link Fragment} subclass.

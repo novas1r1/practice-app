@@ -1,4 +1,4 @@
-package de.verry_on_drums.practice;
+package de.verryondrums.practice;
 
 import org.junit.Test;
 

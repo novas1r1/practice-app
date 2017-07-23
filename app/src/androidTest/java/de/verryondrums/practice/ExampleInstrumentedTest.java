@@ -1,4 +1,4 @@
-package de.verry_on_drums.practice;
+package de.verryondrums.practice;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("de.verry_on_drums.practice", appContext.getPackageName());
+        assertEquals("de.verryondrums.practice", appContext.getPackageName());
     }
 }

@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 
 import de.verryondrums.practice.R;
 
@@ -16,7 +17,7 @@ import de.verryondrums.practice.R;
  * Use the {@link StartTrackingFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class StartTrackingFragment extends Fragment implements View.OnClickListener {
+public class StartTrackingFragment extends Fragment {
     public StartTrackingFragment() {
         // Required empty public constructor
     }
@@ -36,41 +37,38 @@ public class StartTrackingFragment extends Fragment implements View.OnClickListe
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        Button startButton = (Button) getActivity().findViewById(R.id.btn_start_tracking);
-        Button stopButton = (Button) getActivity().findViewById(R.id.btn_stop_tracking);
-        Button saveButton = (Button) getActivity().findViewById(R.id.btn_save);
-
-        startButton.setOnClickListener(this);
-        stopButton.setOnClickListener(this);
-        saveButton.setOnClickListener(this);
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_start_tracking, container, false);
-    }
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.fragment_start_tracking, container, false);
 
-    /**
-     * Called when a view has been clicked.
-     *
-     * @param v The view that was clicked.
-     */
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.btn_start_tracking:
+        Button startButton = (Button) rootView.findViewById(R.id.btn_start_tracking);
+        Button stopButton = (Button) rootView.findViewById(R.id.btn_stop_tracking);
+        Button saveButton = (Button) rootView.findViewById(R.id.btn_save);
+
+
+        startButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 startTracking();
-                break;
-            case R.id.btn_stop_tracking:
-                stopTracking();
-                break;
-            case R.id.btn_save:
+            }
+        });
+        stopButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startTracking();
+            }
+        });
+        saveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 saveTracking();
-                break;
-        }
+            }
+        });
+
+        // Inflate the layout for this fragment
+        return rootView;
     }
 
     private void stopTracking() {
@@ -82,6 +80,12 @@ public class StartTrackingFragment extends Fragment implements View.OnClickListe
     }
 
     private void saveTracking() {
-        // TODO
+        EditText timeInput = (EditText) getActivity().findViewById(R.id.et_time);
+        EditText notesInput = (EditText) getActivity().findViewById(R.id.et_notes);
+
+        // TODO validate
+        // save to database
+        String time = timeInput.getText().toString();
+
     }
 }
